@@ -1,0 +1,28 @@
+#super set do json
+#parecido com python
+#hierarquia dos elementos feita com indentação
+
+# servicos vem de uma imagem docker
+services:
+  databases:
+    image: "postgres:16.1-alpine3.18"
+    environment:
+      POSTGRES_PASSWORD: "local_password"
+
+    #Docker file precisa ser compilado numa imagem
+    #container = imagem rodando
+    #versao alpine do postgres = usa alpine do linux = ocupar menor espaco possivel
+
+    #########################
+    # docker compose up
+    # docker compose up -d == detached
+    # docker ps
+
+    # sudp apt install postgresql-client
+    # config credenciais, portas etc
+    # psql --host=localhost --username=postgres --port=5432
+
+    ports:
+      #- "host:guest"
+      - "5432:5432"
+    # docker compose up -d --force-recreate

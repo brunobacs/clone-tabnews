@@ -6,4 +6,7 @@ function status(request, response) {
   // o json retorna utf8
 }
 
+// usa curl
+// curl http://localhost:3000/api/status --verbose
+
 export default status;
